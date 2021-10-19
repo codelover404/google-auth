@@ -24,10 +24,10 @@
 
 	<script>
 		function check(){
-			var provider = new firebase.auth.FacebookAuthProvider();
+			var provider = new firebase.auth.GoogleAuthProvider();
 			firebase.auth.signInWithPopup(provider).then((result)=>{
-
-				console.log(result);
+		  	var user = result.user;
+			console.log(user);
 			}).catch((err)=>{
 				console.log(err)
 			})
